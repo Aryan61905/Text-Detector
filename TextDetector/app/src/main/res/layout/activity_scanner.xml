@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ScannerActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/camera"
+        android:id="@+id/idIVCapturedImage"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/idIVCapturedImage"
+        android:id="@+id/idTVDetectedText"
+        android:textColor="@color/teal_700"
+        android:text="DETECTED TEXT"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/idTVDetectedText"
+        android:layout_marginTop="30dp"
+        android:text="CAPTURE"
+        android:background="@drawable/button_back"
+        app:backgroundTint="@color/teal_700"
+        android:id="@+id/idBtnCapture"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/idBtnCapture"
+        android:layout_marginTop="30dp"
+        android:text="DETECT"
+        android:background="@drawable/button_back"
+        app:backgroundTint="@color/teal_700"
+        android:id="@+id/idBtnDetect"
+        />
+
+
+
+
+
+</RelativeLayout>
